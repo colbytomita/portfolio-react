@@ -1,0 +1,21 @@
+.testimonial-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding-bottom: 20px; */
+  background-color: white;
+}
+
+.testimonial-body h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 2rem;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

@@ -1,0 +1,69 @@
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: start;
+  margin: 10px;
+  padding: 1rem;
+  width: 600px;
+  background-color: #ece3ce;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in;
+}
+
+/* .project-card-body:hover {
+  background-color: #739072;
+  transition: background-color 0.3s ease-out;
+} */
+
+.project-card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+}
+
+.cover-image {
+  max-width: 100%;
+  /* max-height: 550px; */
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.technology-icons {
+  max-width: 50px;
+  max-height: 50px;
+  box-shadow: none;
+  border: none;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.github-link {
+  background-color: #739072;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 30%;
+  margin: 1rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in;
+}
+
+.github-link:hover {
+  background-color: #4f6f52;
+  transition: background-color 0.3s ease-out;
+}

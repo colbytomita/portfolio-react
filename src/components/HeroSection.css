@@ -1,0 +1,52 @@
+.hero-body {
+  width: 100vw;
+  background: #3a4d39;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+  max-width: 75vw;
+  padding: 0 12.5vw;
+  margin-bottom: -70px;
+}
+
+.hero-image {
+  flex: 0 0 33.33%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 2rem;
+  color: white;
+  text-align: right;
+  /* border: 1px solid white; */
+}
+
+.hero-text h1 {
+  font-size: 4vw;
+  /* border: 1px solid white; */
+  line-height: 50%;
+}
+
+.hero-text p {
+  font-size: 1.5vw;
+  line-height: 1.5;
+  /* font-family: "Poppins", sans-serif; */
+  font-weight: 300;
+}
+
+.color-font {
+  /* color: #ece3ce; */
+  font-weight: 600;
+}
+
+.hero-body img {
+  max-width: 100%;
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 8%);
+  border: 1px solid #ece3ce;
+}

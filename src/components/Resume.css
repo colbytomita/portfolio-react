@@ -1,0 +1,47 @@
+.resume-body {
+  background-color: #4f6f52;
+  display: flex;
+  align-items: center;
+  align-content: start;
+  flex-direction: column;
+  height: 300px;
+}
+
+.resume-body h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 2rem;
+  color: white;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ece3ce;
+  max-width: 400px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.resume-link {
+  background-color: #739072;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 250px;
+  margin: 1rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in;
+}
+
+.resume-link:hover {
+  background-color: #4f6f52;
+  transition: background-color 0.3s ease-out;
+}

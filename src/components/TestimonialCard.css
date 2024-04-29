@@ -1,0 +1,28 @@
+.testimonial-card {
+  background-color: #3a4d39;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 30px;
+  width: 400px;
+  text-align: center;
+  color: white;
+}
+
+.testimonial-author h3 {
+  margin: 0;
+}
+
+.testimonial-author p {
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
