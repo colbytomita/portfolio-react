@@ -6,6 +6,8 @@ import StrengthIcon2 from "../images/helping.png";
 import StrengthIcon3 from "../images/growth.png";
 import StrengthIcon4 from "../images/future.png";
 import StrengthIcon5 from "../images/band-aid.png";
+import Top5Report from "./files/SF_TOP_5.pdf";
+import SignatureThemesReport from "./files/signature-theme.pdf";
 
 const Strengths = () => {
   return (
@@ -51,16 +53,16 @@ const Strengths = () => {
           <div className="links">
             <a
               target="_blank"
-              rel="noreferrer"
               className="strength-link"
-              href="https://content.reportdeliverables.gallup.com/export-engine/users/clients/501/users/90448701/sf/sf_top_5/pdf/2947932/joiner/output/SF_TOP_5.pdf?AQICAHjZZyAeIGLjM/en1OZA2jJV6l83VcK6KINFslip5MnI/QFr0UapQOv62VFVUsyH/WXzAAAA8jCB7wYJKoZIhvcNAQcGoIHhMIHeAgEAMIHYBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDCrsrKvIxfPVStxeVgIBEICBqgR5eUDfalaWhpQ5XTaW7wKrcsy+iHbAf7WY2fbg+oJ2hXTx7fr8IYIWfKZv2CDVWBJuswaqmMfrJRDt6K9/L1Sk6kFYUEFAU59RIE5mhc6r71Lgis6ICrCPAkWkEQpIg8l53Yot9ZV+uy1B6+7+haNYHmKdsrXFEXEMsPP8gaAa6O7XTVmHtAE+S2uUJH2Q/XWmZVsj5xHF4ld1yqL07ZqArdhTQ5WZrZMf">
+              href={Top5Report}
+              download>
               Top 5 Report
             </a>
             <a
               target="_blank"
-              rel="noreferrer"
               className="strength-link"
-              href="https://content.reportdeliverables.gallup.com/batch-service/job-results/SFPDFJobProcessor/pdf/signature-theme-501-0-94525627-20240428030523626118036-ZwlevE.pdf?AQICAHjZZyAeIGLjM/en1OZA2jJV6l83VcK6KINFslip5MnI/QHu/GUB9o6VvhoAlb5aS9ztAAABAjCB/wYJKoZIhvcNAQcGoIHxMIHuAgEAMIHoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDFzyY9yqzC0S0h39ZwIBEICBuqOQzZt/cmPkcxIzgDEwFeIi9OhRHL3vljc3w5zswkL4LpPaiWgVXfA7jOG93O0d15qJ1KeQYCXcyMxw01isg0s/wN1+r5f/qJqgxBx899Juj+y9nhIMseLKiVEuSwyPkcNhNugyJd9wYGwN5xCKL/b/xEmQFQ00TD0Em4ijGqYenTqpoqXaiHdUYXk3xRSQ0G0OgULHWPspct11YLQD839YRLI98btkGDZu7JwPEhDU8H4TPUAblX6Y3Q==">
+              href={SignatureThemesReport}
+              download>
               Signature Themes Report
             </a>
           </div>
