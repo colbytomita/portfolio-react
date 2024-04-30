@@ -31,7 +31,7 @@ const About = () => {
             <div className="about-image">
               <img src={Headshot} alt="Colby Tomita - Portfolio" />
             </div>
-            <a className="mvvg-link" href={mvvg}>
+            <a className="mvvg-link" href={mvvg} download>
               MVVG Paper
             </a>
           </div>
