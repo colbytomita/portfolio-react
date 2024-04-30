@@ -55,14 +55,14 @@ const Strengths = () => {
               target="_blank"
               className="strength-link"
               href={Top5Report}
-              download>
+              rel="noreferrer">
               Top 5 Report
             </a>
             <a
               target="_blank"
               className="strength-link"
               href={SignatureThemesReport}
-              download>
+              rel="noreferrer">
               Signature Themes Report
             </a>
           </div>
