@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import Headshot from "../images/about-headshot.JPG";
+import mvvg from "./files/mvvg.pdf";
 
 const About = () => {
   return (
@@ -26,8 +27,13 @@ const About = () => {
               intelligent applications.
             </p>
           </div>
-          <div className="about-image">
-            <img src={Headshot} alt="Colby Tomita - Portfolio" />
+          <div className="about-right">
+            <div className="about-image">
+              <img src={Headshot} alt="Colby Tomita - Portfolio" />
+            </div>
+            <a className="mvvg-link" href={mvvg}>
+              MVVG Paper
+            </a>
           </div>
         </div>
       </div>
