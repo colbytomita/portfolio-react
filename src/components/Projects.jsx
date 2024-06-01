@@ -18,13 +18,13 @@ const Projects = () => {
             name="Water Reservoir Project"
             image={Project1}
             technologies={[PythonImg, DjangoImg]}
-            link="github.com"
+            link="https://github.com/colbytomita/water_reservoir_ml_predictor"
           />
           <ProjectCard
             name="Personal Portfolio"
             image={Project2}
             technologies={[JavaScriptImg, ReactImg]}
-            link="github.com"
+            link="https://github.com/colbytomita/portfolio-react"
           />
         </div>
       </div>
