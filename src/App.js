@@ -37,10 +37,10 @@ const App = () => {
           <div className="spacer" id="space-5"></div>
           <Resume />
         </section>
-        <section id="testimonials">
+        {/* <section id="testimonials">
           <div className="spacer" id="space-6"></div>
           <Testimonials />
-        </section>
+        </section> */}
         <section id="contact-me">
           <div className="spacer" id="space-7"></div>
           <Contact />
