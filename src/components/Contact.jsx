@@ -19,23 +19,37 @@ const Contact = () => {
     }));
   };
 
+  const [isSending, setIsSending] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSending(true);
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
 
     emailjs
       .send(
         "service_b3epu4m",
         "template_qathqoi",
-        formData,
+        templateParams,
         "h1SwloCC0NpYWs-uV"
       )
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
       })
       .catch((err) => {
         console.error("FAILED...", err);
-      });
+        alert("Failed to send message. Please try again later.");
+      })
+      .finally(() => setIsSending(false));
   };
+  // };
 
   return (
     <>
@@ -47,7 +61,7 @@ const Contact = () => {
               <h2>Contact Info</h2>
               <div className="social-media">
                 <p>
-                  <strong>Email: </strong>tomitacolby@gmail.com
+                  <strong>Email: </strong>tomitacolby@proton.me
                 </p>
                 <p>
                   <strong>Phone: </strong>(808)497-7786
@@ -97,7 +111,9 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}></textarea>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={isSending}>
+                  {isSending ? "Sending..." : "Submit"}
+                </button>
               </form>
             </span>
           </div>

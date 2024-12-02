@@ -14,12 +14,14 @@ const HeroSection = () => {
 
           <div className="hero-text">
             <h1>Hi, I'm Colby Tomita</h1>
-            <p>I'm a senior at Point Loma Nazarene </p>
             <p>
-              Univeristy studying <b>Software</b>
+              I'm a recent <b>Software Engineer</b> grad, currently
             </p>
             <p>
-              <b>Engineering.</b>
+              working as a <b>Systems Analyst</b> at
+            </p>
+            <p>
+              <b>Kamehameha Schools.</b>
             </p>
             {/* <a href="#about-me" className="btn">
               About Me
