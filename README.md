@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# colbytomita · portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal site. Black and white and mostly empty: a sparse starfield, light film grain, and one single-line drawing of a planet. The type does the rest.
 
-## Available Scripts
+Built with React 19, TypeScript and Vite. No UI library; every style is hand-written CSS.
 
-In the project directory, you can run:
+## Run it
 
-### `npm start`
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # typecheck + production build into dist/
+npm run preview   # serve dist/ locally
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Where things live
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| What | File |
+|---|---|
+| All copy (bio, work, tools, projects) | `src/content.ts` |
+| Hero and the planet drawing | `src/components/Hero.tsx` |
+| Film grain + vignette | `src/components/FilmOverlay.tsx` |
+| Starfield | `src/components/Starfield.tsx` |
+| Design tokens (color, type, spacing), both themes | `src/styles/global.css` |
+| Light/dark toggle logic | `src/lib/theme.ts` |
 
-### `npm test`
+To show a resume link in the contact section, put the PDF at `public/resume.pdf` and set `resume: "/resume.pdf"` in `src/content.ts`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Light and dark
 
-### `npm run build`
+The site follows the visitor's system setting until they click the half-circle toggle in the header; after that their choice is saved in `localStorage`. A small script in `index.html` sets `data-theme` before first paint so there's no flash. Dark is silver-on-black; light is ink on photo paper, with the stars turning into dark dots like a printed star chart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deploy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hosted on Vercel. `vercel.json` pins the framework to Vite and the output to `dist/`, so the project settings left over from the old Create React App build don't apply.

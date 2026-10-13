@@ -1,0 +1,38 @@
+.film {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* An oversized noise layer jumped around in steps, like a new frame in the gate. */
+.film__grain {
+  position: absolute;
+  inset: -100%;
+  background-repeat: repeat;
+  opacity: var(--grain);
+  animation: film-grain 1.2s steps(6) infinite;
+}
+
+@keyframes film-grain {
+  0% { transform: translate(0, 0); }
+  17% { transform: translate(-6%, -9%); }
+  33% { transform: translate(-12%, 4%); }
+  50% { transform: translate(7%, -11%); }
+  67% { transform: translate(-3%, 12%); }
+  83% { transform: translate(10%, 3%); }
+  100% { transform: translate(0, 0); }
+}
+
+.film__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 120% 95% at 50% 45%, transparent 60%, var(--vignette) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film__grain {
+    animation: none;
+  }
+}

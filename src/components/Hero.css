@@ -1,0 +1,156 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+  padding-bottom: clamp(56px, 12vh, 120px);
+}
+
+.hero__inner {
+  position: static;
+}
+
+/* ------------------------------------------------------------------
+   The drawing
+------------------------------------------------------------------- */
+.hero__art-wrap {
+  position: absolute;
+  top: 46%;
+  right: max(var(--gutter), calc((100vw - var(--maxw)) / 2 + var(--gutter)));
+  width: min(44vw, 540px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+}
+
+.hero__art {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hero__art path,
+.hero__art circle {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 1.1;
+  stroke-linecap: round;
+}
+
+.hero__art .hero__planet {
+  fill: var(--bg);
+}
+
+.hero__art .hero__orbit {
+  stroke: var(--fg-faint);
+  stroke-width: 0.8;
+  opacity: 0.6;
+}
+
+.hero__art .hero__moon {
+  fill: var(--bg);
+  stroke-width: 1;
+}
+
+/* ------------------------------------------------------------------
+   Text
+------------------------------------------------------------------- */
+.hero__text {
+  position: relative;
+  max-width: 640px;
+}
+
+.hero__name {
+  font-family: var(--serif);
+  font-size: clamp(4.4rem, 10vw, 8.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+.hero__line {
+  display: block;
+  overflow: hidden;
+  padding: 0.04em 0 0.1em;
+  margin-bottom: -0.1em;
+}
+
+.hero__line:nth-child(2) {
+  padding-left: 0.6em;
+}
+
+.hero__word {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 1.4s var(--ease-out);
+}
+
+.hero__line:nth-child(2) .hero__word {
+  transition-delay: 0.1s;
+}
+
+.hero__word--italic {
+  font-style: italic;
+}
+
+.is-inview .hero__word {
+  transform: none;
+}
+
+.hero__lede,
+.hero__now {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.is-inview .hero__lede {
+  opacity: 1;
+  transition-delay: 0.6s;
+}
+
+.is-inview .hero__now {
+  opacity: 1;
+  transition-delay: 0.8s;
+}
+
+.hero__lede {
+  max-width: 38ch;
+  margin-top: 36px;
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  line-height: 1.6;
+  color: var(--fg-dim);
+}
+
+.hero__now {
+  margin-top: 22px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+
+  .hero__art-wrap {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 74vw;
+    margin: 0 calc(var(--gutter) * -0.5) 8vw auto;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__word {
+    transform: none;
+    transition: none;
+  }
+
+  .hero__lede,
+  .hero__now {
+    opacity: 1;
+    transition: none;
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Colby Tomita · Software &amp; cloud engineer</title>
+    <meta
+      name="description"
+      content="Colby Tomita is a software and cloud engineer in Honolulu working on data pipelines and analytics."
+    />
+    <meta name="theme-color" content="#060606" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      // Pick the theme before first paint so there is no flash:
+      // a saved choice wins, otherwise follow the system setting.
+      (function () {
+        var t;
+        try {
+          t = localStorage.getItem("theme");
+        } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.dataset.theme = t;
+        document.querySelector('meta[name="theme-color"]').content = t === "light" ? "#efede6" : "#060606";
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Colby Tomita · Software & cloud engineer" />
+    <meta
+      property="og:description"
+      content="Software and cloud engineer in Honolulu."
+    />
+  </head>
+  <body>
+    <noscript>
+      <p style="font-family: monospace; color: #ebe8e1; background: #060606; padding: 24px">
+        Colby Tomita · Software &amp; cloud engineer · Honolulu · tomitacolby@gmail.com
+      </p>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
